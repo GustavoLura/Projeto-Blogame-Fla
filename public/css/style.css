@@ -1,0 +1,204 @@
+body { 
+    padding: 0;
+    margin: 0; 
+    background-color: #191924;
+    overflow-x: hidden;
+}
+
+.header { 
+    background-color: black;
+    width: 100vw;
+    padding-top: 5px;
+}
+
+.header a{
+    text-decoration: none;
+}
+
+.container { 
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+.logo { 
+    height: 100px; 
+}
+
+.navbar { 
+    float: right;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.nav-item span { 
+    height: 50px; 
+    margin-left: 25px; 
+    cursor: pointer; 
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.nav-item .selecionado {
+    font-weight: bolder;
+}
+/*Termino do header*/
+
+/*Começo do Banner*/
+.banner {
+    width: 100vw;
+    height: 550px; 
+}
+
+.banner_gif {
+    background-image: url('../Assets/imgs/img_inicial_dr\ mengo.jpg');
+    position: absolute;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 550px; 
+}
+
+    .texto h2{
+    font-weight: 400;
+    padding-top: 80px;
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 48px;
+    font-family: 'Flamengo';
+    color: #ffffff;
+    text-shadow: 2px 2px 2px black;
+}
+
+.texto{
+    width: 100%;
+    height: 550px;
+}
+/*Termino do Banner*/
+
+/*Começo do social*/
+
+.social {
+    background-color: #ffffff;
+    padding: 50px 10px;
+    width: 100vw;
+}
+
+.social .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.social .titulo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.social h2 {
+    font-family: 'Flamengo';
+    font-size: smaller;
+    display: flex;
+    padding: 20px;
+    background-color: #000;
+    border-radius: 40px;
+    align-self: center; 
+    justify-self: center;
+    text-align: center;
+    color: #ff0000;
+    margin: 0;
+}
+
+.social .boxes {
+    display: flex;
+    align-items: flex-start;
+}
+
+.social .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+    margin-right: 3px;
+}
+
+.social .box img {
+    width: 250px;
+    align-self: center;
+}
+
+.social .box h4 {
+    color: #ff0000;
+    margin-top: 30px;
+    font-size: x-large;
+}
+
+.social .boxes1 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.social .box1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+    margin-right: 3px;
+}
+
+.social .box1 img {
+    width: 250px;
+    align-self: center;
+}
+
+.social .box1 h4 {
+    color: #ff0000;
+    margin-top: 30px;
+    font-size: x-large;
+}
+
+/*Termino do social*/
+
+/*Começo do footer*/
+.footer {
+    background-color: #000;
+    height: 150px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    border-top: 2px solid #191924;
+    width: 101vw;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.float-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redes {
+    align-items: center;
+    justify-content: center;
+}
+
+.redes .p {
+    font-weight: normal;
+    font-family: 'Flamengo';
+    color: #ffffff;
+    align-items: center;
+}
+
+/*Termino do footer*/

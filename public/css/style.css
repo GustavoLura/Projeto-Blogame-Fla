@@ -1,7 +1,7 @@
 body { 
     padding: 0;
     margin: 0; 
-    background-color: #191924;
+    background-color: #000;
     overflow-x: hidden;
 }
 
@@ -9,6 +9,7 @@ body {
     background-color: black;
     width: 100vw;
     padding-top: 5px;
+    border-bottom: 2px solid #191924;
 }
 
 .header a{
@@ -21,18 +22,19 @@ body {
 }
 
 .logo { 
-    height: 100px; 
+    height: 10vh;
+    width: 12vw; 
 }
 
 .navbar { 
     float: right;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 4vh;
 }
 
 .nav-item span { 
-    height: 50px; 
+    height: 2vh; 
     margin-left: 25px; 
     cursor: pointer; 
     align-items: center;
@@ -48,17 +50,18 @@ body {
 /*Começo do Banner*/
 .banner {
     width: 100vw;
-    height: 550px; 
+    height: 95vh; 
+    display: flex;
 }
 
-.banner_gif {
+.banner_fla {
     background-image: url('../Assets/imgs/img_inicial_dr\ mengo.jpg');
     position: absolute;
     z-index: -1;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 550px; 
+    height: 95vh; 
 }
 
     .texto h2{
@@ -95,7 +98,7 @@ body {
 .social .titulo {
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 8vh;
 }
 
 .social h2 {
@@ -169,36 +172,221 @@ body {
 /*Começo do footer*/
 .footer {
     background-color: #000;
-    height: 150px;
+    height: 15vh;
     color: white;
     margin: 0;
     padding: 0;
     border-top: 2px solid #191924;
-    width: 101vw;
 }
 
 .footer .container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin-top: 35px;
+
 }
 
 .float-box {
     display: flex;
     justify-content: center;
-    align-items: center;
+
 }
 .redes {
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+.redes img { 
+    height: 40px;  
+    margin-right: 28px; 
+    margin-left: 27px;
+    cursor: pointer; 
 }
 
-.redes .p {
-    font-weight: normal;
-    font-family: 'Flamengo';
+
+.redes p.p {
+    font-weight: 200;
+    font-family:Arial, Helvetica, sans-serif;
     color: #ffffff;
     align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-left: 8vw;
+
 }
 
-/*Termino do footer*/
+
+.redes .direitos {
+    font-size: x-small;
+    margin-left: 8vw;
+    font-family: 'Flamengo';
+    margin-top: 20px;
+}
+/*Termino do footer*/   
+
+
+/* QUEM SOU EU */
+
+/*Começo do Banner*/
+.banner_camp {
+    background-image: url('../Assets/imgs/WhatsApp\ Image\ 2021-11-07\ at\ 21.10.52.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50vw;
+    height: 100vh; 
+}
+
+.banner_body_camp{
+    padding: 0;
+    margin: 0; 
+    background-color: #ff0000;
+    
+}
+
+.texto_camp span{
+    font: weight 100px;
+    margin-top: 2vh;
+    font-weight: normal;
+    font-size: 4vh;
+    font-family: 'Flamengo';
+    color: #ffffff;
+    text-shadow: 2px 2px 2px black;
+    float: right;
+}
+
+.texto_camp{
+    width: 40vw;
+    height: 200px;
+}
+
+/* LOGIN */
+
+/*Começo do Banner*/
+.body_login{
+    --color-primary:#191924;
+    --color-primary-dark:#0c0c11;
+    --color-secundary:#b83c3c;
+    --color-error:#ff0000;
+    --color-success:#4bb000;
+    --border-radius: 4px;
+
+    margin: 0;
+    height: 97vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: url(../Assets/imgs/flamengo-maracana-sport-wallpaper-preview.jpg);
+    background-size: cover;
+}
+
+.container_login{
+    width: 400px;
+    max-width: 400px;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    background: #ffffff;
+}
+
+.container,
+.form__input,
+.form__button{
+    font: 500 1rem 'arial', sans--serif;
+}
+
+.form--hidden{
+    display: none;
+}
+
+.form > *:first-child{
+    margin-top: 0;
+}
+
+.form > *:last-child{
+    margin-bottom: 0;
+}
+
+.form__title{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form__message{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form__message--success{
+    color: var(--color-success);
+}
+
+.form__message--error{
+    color: var(--color-error);
+}
+
+.form__input-group{
+    margin-bottom: 1rem;
+}
+
+.form__input{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2,border-color 0.2s;
+}
+
+.form__input:focus{
+    border-color:var(--color-primary);
+    background: #ffffff;
+}
+
+.form__input--error{
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+
+.form__input-error-message{
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+
+.form__button{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+}
+
+.form__button:hover{
+    background: var(--color-primary-dark);
+}
+
+.form__button:active{
+    transform: scale(0.98);
+}
+
+.form__text{
+    text-align: center;
+}
+
+.form__link{
+    color: var(--color-secundary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__link:hover{
+    text-decoration: underline;
+}

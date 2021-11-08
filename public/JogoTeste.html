@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogame Fla</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jogo.css">
     <link rel="shortcut icon" href="Assets/icon/WhatsApp Image 2021-11-06 at 23.03.47.jpeg" type="image/x-icon"> 
     <style>
         @font-face {
@@ -21,7 +21,7 @@
             <img class="logo" src="Assets/icon/WhatsApp Image 2021-11-06 at 23.03.47.jpeg" alt="Foto do logo">
             <div class="navbar">
                 <div class="nav-item">
-                    <a class="selecionado">
+                    <a href="../public/home.html">
                        <span>Inicio</span> 
                     </a>
 
@@ -30,9 +30,9 @@
                         
                     </a>
 
-                    <a href="../public/JogoTeste.html">
+                    <a class="selecionado"> 
                        <span>Jogo teste</span> 
-                       
+                
                     </a>
 
                     <a href="../public/Login.html">
@@ -45,62 +45,29 @@
         </div>
     </div>
 
-     <!--Inicio do Banner-->
-    <div class="banner">
-        <div class="banner_fla">
-        </div>
-        <div class="container">
-            
-            <span class="texto">
-                <h2>Uma vez<br>
-                    flamengo, <br>
-                    sempre <br>
-                    flamengo </h2>
-            </span>
-            </div>    
-    </div>
-    
-
-     <!--Inicio do Social-->
-     <div class="social">
-        <div class="container">
-            <div class="titulo">
-                <h2>Uma paixão de família</h2>
-            </div>
-
-            <div class="boxes">
-                <div class="box">
-                    <img src="../public/Assets/icon/ImgCampo2010.jpeg" alt="Imagem de emgrenagem com natureza">
-                    <h4>2010</h4>
-                </div>
-                <div class="box">
-                    <img src="../public/Assets/icon/img_niver2012.jpeg" alt="Imagem de um binoculo">
-                    <h4>2012</h4>
-                </div>
-                <div class="box">
-                    <img src="../public/Assets/icon/WhatsApp Image 2021-11-07 at 20.44.58.jpeg" alt="Imagem de um planeta">
-                    <h4>2016</h4>
-                </div>
-            </div>
-            <div class="boxes1">
-                <div class="box1">
-                    <img src="../public/Assets/icon/WhatsApp Image 2021-11-07 at 20.39.32.jpeg" alt="Imagem de emgrenagem com natureza">
-                    <h4>2017</h4>
-                </div>
-                <div class="box1">
-                    <img src="../public/Assets/icon/WhatsApp Image 2021-11-07 at 20.45.44.jpeg" alt="Imagem de um binoculo">
-                    <h4>2018</h4>
-                </div>
-                <div class="box1">
-                    <img src="../public/Assets/icon/WhatsApp Image 2021-11-07 at 20.40.51.jpeg" alt="Imagem de um planeta">
-                    <h4>2019</h4>
-                </div>
-            </div>
+    <div class="body_login">
+        <div class="container_login">
+         <div class="form" id="login">
+             <h1 class="form__title">Quem é esse jogador?</h1>
+             
+             <div class="form__input-group">
+                 <img src="./Assets/icon/Img_DiegoAl.jpeg" alt="">
+                <input id="id_diegoal" type="text" class="form__input" autofocus placeholder="Email">
+                <div id="form_message1"></div>
+            </div>  
+            <button id="form__button" onclick="enviar_diegoal()">Enviar</button>
+            <div class="form__input-group">
+                <img src="./Assets/icon/Img_BH.jpeg" alt="">
+               <input id="id_bh" type="text" class="form__input" autofocus placeholder="Email">
+               <div id="form_message2"></div>
+            </div>  
+            <button id="form__button" onclick="enviar_bh()">Enviar</button>
+         </div>
         </div>
     </div>
 
-  <!--Inicio do Footer-->
-  <div class="footer">
+          <!--Inicio do Footer-->
+ <div class="footer">
     <div class="container"> 
         <div class="float-box">
             <div class="redes">   
@@ -127,3 +94,4 @@
 </div>
 </body>
 </html>
+<script src="../src/Jogo.js"></script>

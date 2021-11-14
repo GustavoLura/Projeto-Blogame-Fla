@@ -1,5 +1,5 @@
 function enviar_diegoal(){
-    if (id_diegoal.value == 'Diego Alves' || id_diegoal.value == 'diego alves' || id_diegoal.value == 'Diego alves') {
+    if (id_diegoal.value.toUpperCase() == 'DIEGO ALVES') {
         form_message1.innerHTML = "PARABÉNS!! "    
     }
     else{
@@ -8,7 +8,7 @@ function enviar_diegoal(){
 }
 
 function enviar_bh(){
-    if (id_bh.value == 'Bruno Henrique' || id_bh.value == 'bruno henrique' || id_bh.value == 'Bruno henrique') {
+    if (id_bh.value.toUpperCase() == 'BRUNO HENRIQUE') {
         form_message2.innerHTML = "PARABÉNS!! "    
     }
     else{

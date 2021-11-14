@@ -76,6 +76,10 @@ body {
     background: #ffffff;
 }
 
+.container_login img{
+    margin-left: 10vw;
+}
+
 .container,
 .form__input,
 .form__button{

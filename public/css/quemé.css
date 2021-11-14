@@ -1,0 +1,231 @@
+body { 
+    padding: 0;
+    margin: 0; 
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+.header { 
+    background-color: black;
+    width: 100vw;
+    padding-top: 5px;
+    border-bottom: 2px solid #191924;
+}
+
+.header a{
+    text-decoration: none;
+}
+
+.container { 
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+.logo { 
+    height: 10vh;
+    width: 12vw; 
+}
+
+.navbar { 
+    float: right;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4vh;
+}
+
+.nav-item span { 
+    height: 2vh; 
+    margin-left: 25px; 
+    cursor: pointer; 
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.nav-item .selecionado {
+    font-weight: bolder;
+}
+/*Termino do header*/
+
+/*Começo do social*/
+
+.input_resp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-left: 4vw;
+    width: 70%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2,border-color 0.2s;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    margin-left: 4vw;
+    width: 70%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background: #ff0000
+}
+
+button:hover{
+    background: #a00101
+}
+
+button:active{
+    transform: scale(0.98);
+}
+
+.social {
+    background-color: #ffffff;
+    padding: 50px 10px;
+    width: 100vw;
+}
+
+.social .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.social .titulo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8vh;
+}
+
+.social h2 {
+    font-family: 'Flamengo';
+    font-size: smaller;
+    display: flex;
+    padding: 20px;
+    background-color: #000;
+    border-radius: 40px;
+    align-self: center; 
+    justify-self: center;
+    text-align: center;
+    color: #ff0000;
+    margin: 0;
+}
+
+.social .boxes {
+    display: flex;
+    align-items: flex-start;
+}
+
+.social .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+    margin-right: 3px;
+}
+
+.social .box img {
+    width: 250px;
+    align-self: center;
+}
+
+.social .box h4 {
+    color: #ff0000;
+    margin-top: 30px;
+    font-size: x-large;
+}
+
+.social .boxes1 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.social .box1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+    margin-right: 3px;
+}
+
+.social .box1 img {
+    width: 250px;
+    align-self: center;
+}
+
+.social .box1 h4 {
+    color: #ff0000;
+    margin-top: 30px;
+    font-size: x-large;
+}
+
+/*Termino do social*/
+
+/*Começo do footer*/
+.footer {
+    background-color: #000;
+    height: 15vh;
+    color: white;
+    margin: 0;
+    padding: 0;
+    border-top: 2px solid #191924;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.float-box {
+    display: flex;
+    justify-content: center;
+
+}
+.redes {
+    justify-content: center;
+    align-items: center;
+}
+.redes img { 
+    height: 40px;  
+    margin-right: 28px; 
+    margin-left: 27px;
+    cursor: pointer; 
+}
+
+
+.redes p.p {
+    font-weight: 200;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-left: 8vw;
+
+}
+
+
+.redes .direitos {
+    font-size: x-small;
+    margin-left: 8vw;
+    font-family: 'Flamengo';
+    margin-top: 20px;
+}
+/*Termino do footer*/ 

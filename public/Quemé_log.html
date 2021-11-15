@@ -36,7 +36,7 @@
                        
                     </a>
 
-                    <a href="../public/Login.html">
+                    <a href="../public/home.html">
                         <span>Sair</span> 
                        
                     </a>
@@ -50,39 +50,45 @@
      <div class="social">
         <div class="container">
             <div class="titulo">
-                <h2>Quem são esses jogadores?</h2>
+                <h2>Quem são esses jogadores? <br>
+                <span id="pontuacao">0/6</span></h2> 
             </div>
 
+            <div id="div_scroll">
             <div class="boxes">
                 <div class="box">
                     <img src="./Assets/icon/Img_Arão.jpeg" alt="Imagem de emgrenagem com natureza">
-                    <h4><input type="text" class="input_resp"> <br> <button>Corrigir</button></h4>
+                    <h4><input type="text" class="input_resp" id="id_arao"> <br> <button onclick="corrigir_arao()" id="botao_arao">Corrigir</button></h4>
                 </div>
                 <div class="box">
                     <img src="./Assets/icon/Img_Diegori.jpeg" alt="Imagem de um binoculo">
-                    <h4><input type="text" class="input_resp"> <br> <button>Corrigir</button></h4>
+                    <h4><input type="text" class="input_resp" id="id_diego"> <br> <button onclick="corrigir_diego()" id="botao_diego">Corrigir</button></h4>
                 </div>
                 <div class="box">
                     <img src="./Assets/icon/Img_Evertonri.jpeg" alt="Imagem de um planeta">
-                    <h4><input type="text" class="input_resp"> <br> <button>Corrigir</button></h4>
+                    <h4><input type="text" class="input_resp" id="id_everton"> <br> <button onclick="corrigir_everton()" id="botao_everton">Corrigir</button></h4>
                 </div>
             </div>
             <div class="boxes1">
                 <div class="box1">
                     <img src="./Assets/icon/Img_Micha.jpeg" alt="Imagem de emgrenagem com natureza">
-                    <h4><input type="text" class="input_resp"> <br> <button>Corrigir</button></h4>
+                    <h4><input type="text" class="input_resp" id="id_micha"> <br> <button onclick="corrigir_micha()" id="botao_micha">Corrigir</button></h4>
                 </div>
                 <div class="box1">
                     <img src="./Assets/icon/Img_vitinho.jpeg" alt="Imagem de um binoculo">
-                    <h4><input type="text" class="input_resp"> <br> <button>Corrigir</button></h4>
+                    <h4><input type="text" class="input_resp" id="id_vittinho"> <br> <button onclick="corrigir_vittinho()" id="botao_vitinho">Corrigir</button></h4>
                 </div>
                 <div class="box1">
                     <img src="./Assets/icon/Img_rodi.jpeg" alt="Imagem de um planeta">
-                    <h4><input type="text" class="input_resp"> <br> <button>Corrigir</button></h4>
+                    <h4><input type="text" class="input_resp" id="id_rodi"> <br> <button onclick="corrigir_rodi()" id="botao_rodi">Corrigir</button></h4>
                 </div>
             </div>
+            </div> <br><br><br>
+                <button onclick="dashboard_quem()">VER PONTUAÇÃO</button>
         </div>
     </div>
+
+
 
   <!--Inicio do Footer-->
   <div class="footer">

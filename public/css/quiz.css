@@ -53,9 +53,9 @@ body {
 }
 
 :root{
-    --hue-neutral: 200;
+    --hue-neutral: 230;
     --hue-wrong: 0;
-    --hue-correct: 145;
+    --hue-correct: 125;
 }
 
 body{
@@ -65,7 +65,7 @@ body{
     width: 100vw;
     height: 100vh;
  
-    background-color: hsl(var(--hue),100%,20%);
+    background-color: #191924;
 }
 
 body.correct{
@@ -89,7 +89,6 @@ body.wrong{
     background-color: white;
     border-radius: 5px;
     padding: 10px;
-
     box-shadow: 0 0 10px 2px;
 }
 
@@ -98,6 +97,14 @@ body.wrong{
     justify-content: center;
     align-items: center;
 }
+
+#id_banner{
+    height: 80vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 .btn-grid{
@@ -131,7 +138,7 @@ body.wrong{
 
 }
 
-.start-btn, .next-btn{
+.start-btn, .next-btn, .pont-btn{
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
@@ -199,3 +206,92 @@ body.wrong{
     margin-top: 20px;
 }
 /*Termino do footer*/   
+
+/*Começo do social*/
+
+.social {
+    background-color: #ffffff;
+    padding: 50px 10px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.social .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.social .titulo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8vh;
+}
+
+.social h2 {
+    font-family: 'Flamengo';
+    font-size: smaller;
+    display: flex;
+    padding: 20px;
+    background-color: #000;
+    border-radius: 40px;
+    align-self: center; 
+    justify-self: center;
+    text-align: center;
+    color: #ff0000;
+    margin: 0;
+}
+
+.social .boxes {
+    display: flex;
+    align-items: flex-start;
+}
+
+.social .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+    margin-right: 3px;
+}
+
+.social .box img {
+    width: 250px;
+    align-self: center;
+}
+
+.social .box h4 {
+    color: #ff0000;
+    margin-top: 30px;
+    font-size: x-large;
+}
+
+.social .boxes1 {
+    display: flex;
+    align-items: flex-start;
+}
+
+.social .box1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+    margin-right: 3px;
+}
+
+.social .box1 img {
+    width: 250px;
+    align-self: center;
+}
+
+.social .box1 h4 {
+    color: #ff0000;
+    margin-top: 30px;
+    font-size: x-large;
+}
+
+/*Termino do social*/

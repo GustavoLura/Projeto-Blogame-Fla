@@ -1,7 +1,7 @@
 const startButton = document.getElementById('start-btn')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById
-('question-container')
+('questioncontainer')
 
 const questionElement = document.getElementById('question')
 const answerButtonElement = document.getElementById('answer-buttons')
@@ -62,9 +62,15 @@ function selectAnswer(e){
         nextButton.classList.remove('hide')
     }
     else{
-        startButton.innerText = 'Reiniciar'
-        startButton.classList.remove('hide')
+ 
+        pont_btn.style.display = 'block'
     }
+}
+
+function dashboard(){
+    alert('TESTE')
+    id_banner.style.display = 'none'
+    id_social.style.display = 'block'
 }
 
 function setStatusClass(element, correct){

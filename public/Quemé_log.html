@@ -14,6 +14,7 @@
         }
     </style>
     <script src="js/quemé.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <!--Inicio do Header-->
@@ -49,9 +50,8 @@
      <!--Inicio do Social-->
      <div class="social">
         <div class="container">
-            <div class="titulo">
-                <h2>Quem são esses jogadores? <br>
-                <span id="pontuacao">0/6</span></h2> 
+            <div class="titulo" id="id_titulo">
+                <h2>Quem são esses jogadores?</h2> 
             </div>
 
             <div id="div_scroll">
@@ -84,7 +84,18 @@
                 </div>
             </div>
             </div> <br><br><br>
-                <button onclick="dashboard_quem()">VER PONTUAÇÃO</button>
+                <button onclick="dashboard_quem()" id="ver_pontuacao">VER PONTUAÇÃO</button>
+        
+            <div id="id_dashboard_quem" style="display: none;">
+                <div class="titulo">
+                    <h2>TOTAL:<br>
+                    <span id="pontuacao">0/6</span></h2> 
+                </div>
+                <div class="graph">
+                    <canvas id="chartBar" style="width: 80%; height: 100%;"></canvas><br><br><br>
+                <button onclick="voltar_jogo()" href="../public/home_log.html" id="id_tentar_novamente">VOLTAR PARA O INICIO</button>
+                  </div>
+            </div>
         </div>
     </div>
 

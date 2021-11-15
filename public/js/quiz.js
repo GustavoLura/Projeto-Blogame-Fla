@@ -73,13 +73,18 @@ function dashboard(){
     id_social.style.display = 'block'
 }
 
+
 function setStatusClass(element, correct){
     clearStatusClass(element)
     if (correct) {
+        console.log('Ponto')
         element.classList.add('correct')
+        ponto()
     }
     else{
         element.classList.add('wrong')
+        console.log('Perdeu')
+        
     }
 }
 
@@ -127,6 +132,7 @@ const questions = [
             {text:'Flamengo 3 x 0 Liverpool',correct:true},
             {text:'Flamengo 1 x 2 Liverpool',correct:false},
             {text:'Flamengo 2 x 1 Liverpool',correct:false},
+            
         ]
     },
 
@@ -190,3 +196,13 @@ const questions = [
         ]
     }
 ]
+
+var pont_quiz = 0;
+ 
+function ponto(){
+    pont_quiz++
+    cont.innerHTML = `${pont_quiz * 5}`
+
+}
+
+

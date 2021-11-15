@@ -91,10 +91,15 @@ button:active{
     transform: scale(0.98);
 }
 
+#id_tentar_novamente{
+    width: 90%;
+}
+
 .social {
     background-color: #ffffff;
     padding: 50px 10px;
     width: 100vw;
+    height: 110vh;
 }
 
 .social .container {
@@ -110,7 +115,6 @@ button:active{
 }
 
 .social h2 {
-    width: 21vw;
     font-family: 'Flamengo';
     font-size: smaller;
     display: flex;
@@ -195,6 +199,11 @@ button:active{
   #div_scroll::-webkit-scrollbar-thumb {
     background: #ff0000;
     border-radius: 10px;
+}
+
+.graph{
+    height: 60vh;
+    width: 80vw;
 }
 
 /*Termino do social*/

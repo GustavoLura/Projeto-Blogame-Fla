@@ -125,7 +125,8 @@ body.wrong{
 }
 
 .btn:hover{
-    border-color: black;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 .btn.correct{

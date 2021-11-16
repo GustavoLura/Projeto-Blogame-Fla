@@ -84,7 +84,7 @@ function setStatusClass(element, correct){
     else{
         element.classList.add('wrong')
         console.log('Perdeu')
-        
+        errado()
     }
 }
 
@@ -202,6 +202,12 @@ var pont_quiz = 0;
 function ponto(){
     pont_quiz++
     cont.innerHTML = `${pont_quiz * 5}`
+
+}
+
+function errado(){
+    pont_quiz++
+    cont.innerHTML = `${pont_quiz -= 5}`
 
 }
 

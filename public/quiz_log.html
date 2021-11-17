@@ -41,7 +41,7 @@
 
      <!--Inicio do Banner-->
         <div class="banner"  id="id_banner"> 
-            <div id="cont" style="color: aliceblue;">0</div>
+            
             <div class="container">
             <span id="id_frase_inicial"> Esse é um quiz sobre o Clube de Regatas do Flamengo,vamos jogar? </span><br>
         <div id="questioncontainer" class="hide">
@@ -62,8 +62,26 @@
     </div>
     </div>
     <div class="social hide" id="id_social">
-        
-        <img src="./Assets/icon/Img_Arão.jpeg" alt="Imagem de emgrenagem com natureza" style="height: 100px;">
+        <H1><div id="cont">0</div></H1>
+        <!-- Farol de temperatura -->
+    <div class="graph">
+        <div class="box red">
+          <h1>0 / 30.5</h1>
+          <h3>Ruim</h3>
+          <p>Parece que o Flamengo não é seu time de coração...</p>
+        </div>
+        <div class="box yellow">
+          <h1>31 / 40.5</h1>
+          <h3>Bom</h3>
+          <p>Você é um torcedor...</p>
+        </div>
+        <div class="box green">
+          <h1>41 / 50</h1>
+          <h3>Ótimo</h3>
+          <p>Flamenguista doido</p>
+        </div>
+    </div>
+    <button onclick="voltar_quiz()" id="btn_voltar">Voltar para o Inicio</button>
     </div>
 
 

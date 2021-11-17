@@ -16,7 +16,7 @@ nextButton.addEventListener('click',()=>{
 function startGame(){
     console.log('started')
     id_frase_inicial.style.display = 'none'
-    alert('O jogo é muito simples! Para cada acerto, você ganha 10 pontos, mas se errar perde 5. Boa sorte!')
+    alert('O jogo é muito simples! Responda corretamente, e no final, veja a pontuação atingida!')
     startButton.classList.add('hide')
     shuffledQuestions = questions.sort(()=> Math.random() - .5)
     currentQuestionIndex = 0
@@ -84,7 +84,6 @@ function setStatusClass(element, correct){
     else{
         element.classList.add('wrong')
         console.log('Perdeu')
-        errado()
     }
 }
 
@@ -201,14 +200,14 @@ var pont_quiz = 0;
  
 function ponto(){
     pont_quiz++
-    cont.innerHTML = `${pont_quiz * 5}`
-
+    cont.innerHTML = `Sua pontuação foi ${pont_quiz * 5/2} / 50`
+    
 }
 
-function errado(){
-    pont_quiz++
-    cont.innerHTML = `${pont_quiz -= 5}`
-
+function voltar_quiz(){
+    id_banner.style.display = 'block'
+    id_social.style.display = 'none'
 }
+
 
 

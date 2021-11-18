@@ -205,8 +205,7 @@ function ponto(){
 }
 
 function voltar_quiz(){
-    id_banner.style.display = 'block'
-    id_social.style.display = 'none'
+    window.location.href('..')
 }
 
 

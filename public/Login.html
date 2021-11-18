@@ -40,6 +40,11 @@
                        
                     </a>
 
+                     <a class="selecionado">
+                        <span>Cadastro</span> 
+                       
+                    </a>
+
                 </div>  
             </div>
         </div>
@@ -51,14 +56,14 @@
          <div class="form__message form__message--error">Confira se o login e a senha foram digitados corretamente.</div>
          
          <div class="form__input-group">
-            <input type="text" class="form__input" autofocus placeholder="Email">
+            <input type="text" class="form__input" autofocus placeholder="Email" id="id_email_login">
             <div class="form__input-error-message">This is error message</div>
         </div>  
         <div class="form__input-group">
-            <input type="password" class="form__input" autofocus placeholder="Senha">
+            <input type="password" class="form__input" autofocus placeholder="Senha" id="id_senha_login">
             <div class="form__input-error-message"></div>
         </div>
-        <button class="form__button" type="submit">Entrar</button>
+        <button class="form__button" type="submit" onclick="entrar()">Entrar</button>
         <p class="form__text">
             <a href="#" class="form__link">Esqueceu sua senha?</a>
         </p>
@@ -66,27 +71,28 @@
             <a class="form__link" href="./" id="linkCadastrar" >Não tem conta? Cadastre-se</a>
         </p>
      </form>
+
      <form class="form form--hidden" id="cadastro">
         <h1 class="form__title">Cadastre-se</h1>
         <div class="form__message form__message--error">Confira se o login e a senha foram digitados corretamente.</div>
         
         <div class="form__input-group">
-            <input type="text" class="form__input" autofocus placeholder="Email">
+            <input type="text" class="form__input" autofocus placeholder="Email" id="id_email_cadastro">
             <div class="form__input-error-message">This is error message</div>
         </div>  
         <div class="form__input-group">
-            <input type="text" class="form__input" autofocus placeholder="Nome de Usuário">
+            <input type="text" class="form__input" autofocus placeholder="Nome de Usuário" id="id_nomeusuario_cadastro">
             <div class="form__input-error-message">This is error message</div>
         </div>  
        <div class="form__input-group">
-           <input type="password" class="form__input" autofocus placeholder="Senha">
+           <input type="password" class="form__input" autofocus placeholder="Senha" id="id_senha_cadastro">
            <div class="form__input-error-message"></div>
        </div>
        <div class="form__input-group">
-        <input type="password" class="form__input" autofocus placeholder="Confirme sua senha">
+        <input type="password" class="form__input" autofocus placeholder="Confirme sua senha" id="id_confirmarsenha_cadastro">
         <div class="form__input-error-message"></div>
     </div>
-       <button class="form__button" type="submit">Continuar</button>
+       <button class="form__button" onclick="cadastrar()" type="submit">Cadastrar</button>
        <p class="form__text">
            <a class="form__link" href="./" id="linkLogin" >Tem conta? Faça o login</a>
        </p>
@@ -123,5 +129,147 @@
 </body>
 </html>
     <script src="js/Login.js"></script>
+    <script>
 
+        function cadastrar() {
+            aguardar();
+    
+            var emailVar = id_email_cadastro.value;
+            var nomeVar = id_nomeusuario_cadastro.value;
+            var senhaVar = id_senha_cadastro.value;
+            var confirmacaoSenhaVar = id_confirmarsenha_cadastro.value;
+    
+            if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+    
+                window.alert("Preencha todos os campos para prosseguir!");
+                if (nomeVar == "") {
+                    console.log('nome está em branco')
+                }
+                if (emailVar == "") {
+                    console.log('email está em branco')
+                }
+                if (senhaVar == "") {
+                    console.log('senha está em branco')
+                }
+                if (confirmacaoSenhaVar == "") {
+                    console.log('confirmacaoSenha está em branco')
+                }
+                finalizarAguardar();
+                return false;
+            }
+    
+            if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+                window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+                finalizarAguardar();
+                return false;
+            }
+    
+            if (senhaVar != confirmacaoSenhaVar) {
+                window.alert("As senhas inseridas devem ser iguais para prosseguir!");
+                finalizarAguardar();
+                return false;
+            }
+    
+            fetch("/usuarios/cadastrar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    nomeServer: nomeVar,
+                    emailServer: emailVar,
+                    senhaServer: senhaVar
+                })
+            }).then(function (resposta) {
+    
+                console.log("resposta: ", resposta);
+    
+                if (resposta.ok) {
+                    window.alert("Cadastro realizado com sucesso!");
+                    window.location = "login.html";
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                finalizarAguardar();
+            });
+    
+            return false;
+        }
+    
+    </script>
+    
+<script>
+    function entrar() {
+        aguardar();
+
+        var emailVar = id_email_login.value;
+        var senhaVar = id_senha_login.value;
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
+        if (emailVar == "" || senhaVar == "") {
+            window.alert("Preencha todos os campos para prosseguir!");
+            finalizarAguardar();
+            return false;
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
+            finalizarAguardar();
+            return false;
+        }
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
+
+                    setTimeout(function () {
+                        window.location = "./dashboard/cards.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+</script>
 

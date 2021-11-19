@@ -35,12 +35,12 @@
                        
                     </a>
 
-                    <a class="selecionado">
+                    <a href="../public/Login.html">
                         <span>Login</span> 
                        
                     </a>
 
-                    <a href="../public/cadastro.html">
+                    <a class="selecionado">
                         <span>Cadastro</span> 
                        
                     </a>
@@ -50,24 +50,37 @@
         </div>
     </div>
 
-    <div class="banner-login">
-        <div class="container_login">
+    <!--header fim-->
+
+    <div class="banner-login ">
+        <div class="container ">
             <div class="card medio">
-                <h2>Olá de volta!</h2>
+                <h2>Bem-vindo!</h2>
                 <div class="formulario">
-                    <div>
+                    <div id="form_cadastro">
+                        Nome:
+                        <br>
+                        <input id="nome_input" type="text" placeholder="Ada Lovelace">
+                        <br>
+                        <br>
                         E-mail:
-                        <input id="email_input" type="text" placeholder="Login">
+                        <br>
+                        <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+                        <br>
                         <br>
                         Senha:
+                        <br>
                         <input id="senha_input" type="password" placeholder="******">
                         <br>
-                        <button class="btn" onclick="entrar()">Entrar</button>
+                        <br>
+                        Confirmação da Senha:
+                        <br>
+                        <input id="confirmacao_senha_input" type="password" placeholder="******">
+                        <br>
+                        <br>
+                        <button class="btn" onclick="cadastrar()">Cadastrar</button>
                     </div>
-
-
                 </div>
-
                 <div id="div_aguardar" class="loading-div">
                     <img src="./assets/circle-loading.gif" id="loading-gif">
                 </div>
@@ -109,18 +122,30 @@
 </html>
 
 <script>
-    function entrar() {
+
+    function cadastrar() {
         aguardar();
 
+        var nomeVar = nome_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        console.log("FORM LOGIN: ", emailVar);
-        console.log("FORM SENHA: ", senhaVar);
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
 
-        // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
-        if (emailVar == "" || senhaVar == "") {
             window.alert("Preencha todos os campos para prosseguir!");
+            if (nomeVar == "") {
+                console.log('nome está em branco')
+            }
+            if (emailVar == "") {
+                console.log('email está em branco')
+            }
+            if (senhaVar == "") {
+                console.log('senha está em branco')
+            }
+            if (confirmacaoSenhaVar == "") {
+                console.log('confirmacaoSenha está em branco')
+            }
             finalizarAguardar();
             return false;
         }
@@ -131,48 +156,38 @@
             return false;
         }
 
-        fetch("/usuarios/autenticar", {
+        if (senhaVar != confirmacaoSenhaVar) {
+            window.alert("As senhas inseridas devem ser iguais para prosseguir!");
+            finalizarAguardar();
+            return false;
+        }
+
+        fetch("/usuarios/cadastrar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
+                nomeServer: nomeVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar
             })
         }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO entrar()!")
+
+            console.log("resposta: ", resposta);
 
             if (resposta.ok) {
-                console.log(resposta);
-
-                resposta.json().then(json => {
-                    console.log(json);
-                    console.log(JSON.stringify(json));
-
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-
-                    setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
-
-                });
-
+                window.alert("Cadastro realizado com sucesso!");
+                window.location = "login.html";
+                limparFormulario();
+                finalizarAguardar();
             } else {
-
-                console.log("Houve um erro ao tentar realizar o login!");
-
-                resposta.text().then(texto => {
-                    console.error(texto);
-                    finalizarAguardar(texto);
-                });
+                throw ("Houve um erro ao tentar realizar o cadastro!");
             }
-
-        }).catch(function (erro) {
-            console.log(erro);
-        })
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
 
         return false;
     }

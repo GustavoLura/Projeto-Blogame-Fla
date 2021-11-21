@@ -140,5 +140,6 @@ function dashboard_quem(){
 }
 
 function voltar_jogo(){
+  window.location.href = './Quemé_log.html'
     
 }

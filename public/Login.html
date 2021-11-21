@@ -52,25 +52,28 @@
 
     <div class="banner-login">
         <div class="container_login">
-            <div class="card medio">
-                <h2>Olá de volta!</h2>
+            <div class="card_medio">
+                <h2>Login</h2>
                 <div class="formulario">
                     <div>
                         E-mail:
-                        <input id="email_input" type="text" placeholder="Login">
+                        <input class="form__input" id="email_input" type="text" placeholder="Digite seu E-mail">
                         <br>
                         Senha:
-                        <input id="senha_input" type="password" placeholder="******">
-                        <br>
+                        <input class="form__input" id="senha_input" type="password" placeholder="******">
+                        <br> 
                         <button class="btn" onclick="entrar()">Entrar</button>
                     </div>
 
 
-                </div>
+                </div> <br><br>
 
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
+                <a href="../public/cadastro.html" id="id_cadastre_se">
+                    <span>Não tem login? Cadastre-se agora!</span> 
+                   
+                </a>
+
+                
 
                 <div id="div_erros_login">
 

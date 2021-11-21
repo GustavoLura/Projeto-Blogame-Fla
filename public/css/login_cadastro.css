@@ -60,17 +60,176 @@ body {
     background-size: cover;
 }
 
-.container_login{
-    width: 400px;
-    max-width: 400px;
-    margin: 1rem;
-    padding: 2rem;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+  .banner-login .container_login {
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .banner-login {
+    color: #ff0000;
+  }
+  
+  .banner-login .card_medio {
+    background-color: #ffffff;
+    height: 70vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0 40 40px rgba(0, 0, 0, 0.363);
     border-radius: 5px;
+  }
+  
+  .banner-login a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .banner-login #div_erros_login {
+    margin-top: 15px;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .btn{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background: #ff0000;
+}
+
+.btn:hover{
+    background: #990505;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.form__input{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2,border-color 0.2s;
+}
+
+.form__input:focus{
+    border-color:#ff0000;
     background: #ffffff;
 }
 
+#id_cadastre_se{
+    color:#990505 ;
+}
 
+#id_cadastre_se:hover{
+    font-weight: 600;
+}
+
+/*cadastro*/
+
+.banner-cadastro .card_medio_cad {
+    background-color: #ffffff;
+    height: 80vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0 40 40px rgba(0, 0, 0, 0.363);
+    border-radius: 5px;
+  }
+
+.banner-cadastro{
+    margin: 0;
+    height: 97vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: url(../Assets/imgs/maracana-rio-de-janeiro-flamengo-clube-de-regatas-do-flamengo-crowds-hd-wallpaper-preview.jpg);
+    background-size: cover;
+}
+
+
+
+  .banner-cadastro .container_login {
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .banner-cadastro {
+    color: #ff0000;
+  }
+  
+  .banner-cadastro a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .btn{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background: #ff0000;
+}
+
+.btn:hover{
+    background: #990505;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.form__input{
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2,border-color 0.2s;
+}
+
+.form__input:focus{
+    border-color:#ff0000;
+    background: #ffffff;
+}
 
 /*Começo do footer*/
 .footer {

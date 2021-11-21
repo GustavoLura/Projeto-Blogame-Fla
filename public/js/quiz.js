@@ -205,7 +205,7 @@ function ponto(){
 }
 
 function voltar_quiz(){
-    window.location.href('..')
+    window.location = './quiz_log.html'
 }
 
 

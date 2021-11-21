@@ -239,7 +239,7 @@ body {
     margin: 0;
     padding: 0%;
     background-color: #ff0000;
-    height: 100vh;
+    height: 90vh;
 }
 
 th,tr,td{
@@ -257,8 +257,10 @@ table{
     margin-top: 2vh;
 }
 
-img{
+td img{
     border:2px solid black;
+    height: 270px;
+    
 }
 th{
     background-color:lightblue;
@@ -276,6 +278,35 @@ h2{
 td{
     color: #000;
     font-weight: bold;
+}
+
+.textos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    height: 90vh;
+    width: 55vw;
+    background-color: #ff0000;
+
+}
+
+header{
+    background-color: #ff0000;
+    height: 90vh;
+    width: 0%;
+}
+
+nav{
+    width: 100%;
+    background-color: #ff0000;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* LOGIN */
 
@@ -409,4 +440,72 @@ td{
 
 .form__link:hover{
     text-decoration: underline;
+}
+
+/*SAIR */ 
+
+.banner-cadastro .card_medio_cad {
+    background-color: #ffffff;
+    height: 50vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0 40 40px rgba(0, 0, 0, 0.363);
+    border-radius: 5px;
+  }
+
+.banner-cadastro{
+    margin: 0;
+    height: 97vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background-color: #0c0c11;
+}
+
+
+
+  .banner-cadastro .container_login {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 40 40px rgb(0, 0, 0);
+
+  }
+  
+  .banner-cadastro {
+    color: #ff0000;
+  }
+  
+  
+  button {
+    cursor: pointer;
+  }
+  
+  .btn{
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    background: #ff0000;
+}
+
+.btn:hover{
+    background: #990505;
+}
+
+.btn:active{
+    transform: scale(0.98);
 }

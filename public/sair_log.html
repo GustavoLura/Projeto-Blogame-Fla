@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogame Fla</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="Assets/icon/WhatsApp Image 2021-11-06 at 23.03.47.jpeg" type="image/x-icon"> 
+    <style>
+        @font-face {
+            font-family:'Flamengo';
+            src: url('./css/RockSalt-Regular.ttf') format('truetype');
+        }
+    </style>
+</head>
+<body>
+    <!--Inicio do Header-->
+    <div class="header">
+        <div class="container">
+            <img class="logo" src="Assets/icon/WhatsApp Image 2021-11-06 at 23.03.47.jpeg" alt="Foto do logo">
+            <div class="navbar">
+                <div class="nav-item">
+                    <a href="../public/home_log.html">
+                       <span>Inicio</span> 
+                    </a>
+
+                    <a href="../public/quiz_log.html">
+                        <span>Quiz</span> 
+                        
+                    </a>
+
+                    <a href="../public/Quemé_log.html">
+                       <span>Quem é esse jogador</span> 
+                       
+                    </a>
+
+                    <a class="selecionado">
+                        <span>Sair</span> 
+                       
+                    </a>
+
+                </div>  
+            </div>
+        </div>
+    </div>
+
+     <!--Inicio do Social-->
+     <div class="banner-cadastro">
+        <div class="container_login">
+            <div class="card_medio">
+                <h4>TEM CERTEZA QUE DESEJA SAIR?</h4>
+                <div class="formulario">
+                    <div>
+                        <button class="btn" onclick="sair_sim()">SIM</button> <br><br>
+                        <button class="btn" onclick="sair_nao()">NÃO</button>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!--Inicio do Footer-->
+  <div class="footer">
+    <div class="container"> 
+        <div class="float-box">
+            <div class="redes">   
+                <p class="p">Apoio: <br> Bandtec Digital School</p>
+                <a href="https://web.whatsapp.com/">
+                    <img src="../public/Assets/icon/whatsapp.png" alt="" title="WHATSAPP">
+                </a>
+
+                <a href="https://github.com/GustavoLura">
+                    <img src="../public/Assets/icon/github.png" alt="" title="GITHUB">
+                </a>
+
+                <a href="https://www.instagram.com/g.lura_7/">
+                    <img src="../public/Assets/icon/instagram.png" alt="" title="INSTAGRAM">
+                </a>
+
+                <a href="https://www.linkedin.com/in/gustavo-lura-914025219/">
+                    <img src="../public/Assets/icon/linkedin.png" alt="" title="LINKEDIN">
+                </a>
+                <p class="direitos">Feito por: Gustavo Lura</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+    function sair_sim(){
+        alert('Volte sempre!!')
+    
+    window.location.href = './home.html'
+    }
+
+    function sair_nao(){
+        alert('Boa!!')
+    window.location.href = './home_log.html'
+
+    }
+</script>

@@ -28,29 +28,25 @@ CREATE TABLE medida (
 
 
 /* para workbench - local - desenvolvimento */
-CREATE DATABASE acquatec;
+create database blogamefla;
+use blogamefla;
 
-USE acquatec;
+CREATE TABLE usuario(
+idusuario INT PRIMARY KEY AUTO_INCREMENT,
+email VARCHAR(45),
+nomeusuario VARCHAR(45),
+senha VARCHAR(45),
+confirmarsenha VARCHAR(45));
 
-CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
+CREATE TABLE pontuacoes(
+idpontuacoes INT PRIMARY KEY AUTO_INCREMENT,
+pontuacaoquiz VARCHAR(45),
+pontuacaoqualjogador VARCHAR(45)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-    descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
-); 
-
-CREATE TABLE medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	temperatura DECIMAL,
-	umidade DECIMAL,
-	momento DATETIME,
-	fk_aquario INT
+CREATE TABLE usuario_pontuacao(
+fk_usuario INT,
+FOREIGN KEY (fk_usuario) REFERENCES usuario(idusuario),
+fk_pontuacoes INT,
+FOREIGN KEY (fk_pontuacoes) REFERENCES pontuacoes(idpontuacoes)
 );

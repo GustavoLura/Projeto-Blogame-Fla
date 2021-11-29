@@ -1,3 +1,4 @@
+create database blogamefla;
 use blogamefla;
 
 CREATE TABLE usuario(

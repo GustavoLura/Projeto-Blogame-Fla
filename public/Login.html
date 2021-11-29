@@ -23,16 +23,16 @@
             <img class="logo" src="Assets/icon/WhatsApp Image 2021-11-06 at 23.03.47.jpeg" alt="Foto do logo">
             <div class="navbar">
                 <div class="nav-item">
-                    <a href="home.html">
+                    <a href="index.html">
                        <span>Inicio</span> 
                     </a>
 
-                    <a href="../public/QuemSouEu.html">
+                    <a href="QuemSouEu.html">
                         <span>Quem sou eu</span> 
                         
                     </a>
 
-                    <a href="../public/JogoTeste.html">
+                    <a href="JogoTeste.html">
                        <span>Jogo teste</span> 
                        
                     </a>
@@ -42,7 +42,7 @@
                        
                     </a>
 
-                    <a href="../public/cadastro.html">
+                    <a href="cadastro.html">
                         <span>Cadastro</span> 
                        
                     </a>
@@ -70,7 +70,7 @@
 
                 </div> <br><br>
 
-                <a href="../public/cadastro.html" id="id_cadastre_se">
+                <a href="cadastro.html" id="id_cadastre_se">
                     <span>Não tem login? Cadastre-se agora!</span> 
                    
                 </a>
@@ -115,7 +115,7 @@
 
 <script>
     function entrar() {
-        aguardar();
+       
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
@@ -126,13 +126,13 @@
         // TODO: VERIFICAR AS VALIDAÇÕES QUE ELES ESTÃO APRENDENDO EM ALGORITMOS 
         if (emailVar == "" || senhaVar == "") {
             window.alert("Preencha todos os campos para prosseguir!");
-            finalizarAguardar();
+       
             return false;
         }
 
         if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
             window.alert("Ops, e-mail inválido! Verifique e tente novamente.");
-            finalizarAguardar();
+       
             return false;
         }
 
@@ -160,7 +160,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "home_log.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -171,7 +171,7 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
+                    alert("Email e/ou senha inválidos")
                 });
             }
 

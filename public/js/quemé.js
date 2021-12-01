@@ -137,6 +137,8 @@ function dashboard_quem(){
   }
   var ax_chartBar = new Chart(ctxBar, configBar); // criando o gráfico, chamando o new Chart da biblioteca, passando o contexto e as configurações
 
+  setTimeout(() =>alert(`${sessionStorage.NOME_USUARIO}, aqui está a sua pontuação!`), 1000 );
+  
 }
 
 function voltar_jogo(){

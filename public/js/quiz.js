@@ -68,7 +68,6 @@ function selectAnswer(e){
 }
 
 function dashboard(){
-    alert('TESTE')
     id_banner.style.display = 'none'
     id_social.style.display = 'block'
 }

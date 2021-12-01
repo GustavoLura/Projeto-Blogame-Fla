@@ -18,5 +18,7 @@ CREATE TABLE pontuacao(
 fk_usuario INT,
 FOREIGN KEY (fk_usuario) REFERENCES usuario(idusuario),
 fk_jogo INT,
-FOREIGN KEY (fk_jogo) REFERENCES jogo(idjogo)
+FOREIGN KEY (fk_jogo) REFERENCES jogo(idjogo),
+pontuacao INT,
+diahora DATETIME
 );

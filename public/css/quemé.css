@@ -180,10 +180,25 @@ button:active{
     font-size: x-large;
 }
 
+#id_duvida{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    float: right;
+}
+
+#id_duvida:hover{
+    height: 32px;
+    width: 32px;
+}
+
 #div_scroll{
     overflow-y: scroll;
     height: 70vh;
     border-radius: 10px;
+    box-shadow: 0 40 40px rgba(0, 0, 0, 0.363);
 }
 
 #div_scroll::-webkit-scrollbar {

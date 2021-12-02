@@ -48,57 +48,18 @@
 
      <!--Inicio do Banner-->
     <div class="banner">
-        <div class="banner_fla">
+        <div class="banner_fla2">
         </div>
         <div class="container">
             
-            <span class="texto">
-                <h2>Seja<br>
-                    Bem-Vindo!! <br>
+            <span class="boasvindas">
+                <h5>Bem-Vindo(a) <br> <span id="id_nome_usuario"></span>, <br>
                     Vamos<br>
-                    Jogar? </h2>
+                    Jogar? </h5>
             </span>
             </div>    
     </div>
     
-
-     <!--Inicio do Social-->
-     <div class="social">
-        <div class="container">
-            <div class="titulo">
-                <h2>Uma paixão de família</h2>
-            </div>
-
-            <div class="boxes">
-                <div class="box">
-                    <img src="../public/Assets/icon/ImgCampo2010.jpeg" alt="Foto com meu primo em um campo em 2010">
-                    <h4>2010</h4>
-                </div>
-                <div class="box">
-                    <img src="../public/Assets/icon/img_niver2012.jpeg" alt="Baner do meu aniversario do flamengo de 2012">
-                    <h4>2012</h4>
-                </div>
-                <div class="box">
-                    <img src="../public/Assets/icon/WhatsApp Image 2021-11-07 at 20.44.58.jpeg" alt="Foto com meu pai e meu padrinho em um jogo do flamengo">
-                    <h4>2016</h4>
-                </div>
-            </div>
-            <div class="boxes1">
-                <div class="box1">
-                    <img src="../public/Assets/icon/WhatsApp Image 2021-11-07 at 20.39.32.jpeg" alt="Foto com meu primo em 2017">
-                    <h4>2017</h4>
-                </div>
-                <div class="box1">
-                    <img src="../public/Assets/icon/WhatsApp Image 2021-11-07 at 20.45.44.jpeg" alt="Foto com familia e amigos no meu aniversario de 15 anos">
-                    <h4>2018</h4>
-                </div>
-                <div class="box1">
-                    <img src="../public/Assets/icon/WhatsApp Image 2021-11-07 at 20.40.51.jpeg" alt="Foto com meu pai e minha irmã">
-                    <h4>2019</h4>
-                </div>
-            </div>
-        </div>
-    </div>
 
   <!--Inicio do Footer-->
   <div class="footer">
@@ -128,3 +89,7 @@
 </div>
 </body>
 </html>
+<script>
+    var nome_usuario = sessionStorage.getItem('NOME_USUARIO')
+    id_nome_usuario.innerHTML = nome_usuario 
+</script>

@@ -9,10 +9,12 @@ function corrigir_arao(){
     id_arao.value.toUpperCase() == 'ARAO' || id_arao.value.toUpperCase() == 'WILLIAM ARAO') {
 
         pontuacao.innerHTML = `${contador = contador + acertou}/6`
+        document.getElementById("id_arao").disabled = true
         document.getElementById("botao_arao").disabled = true
         contador_acertou++
     } else {
         pontuacao.innerHTML = `${contador = contador + errou}/6`
+        document.getElementById("id_arao").disabled = true
         document.getElementById("botao_arao").disabled = true
         contador_errou--
     }
@@ -22,10 +24,12 @@ function corrigir_diego(){
     if (id_diego.value.toUpperCase() == 'DIEGO' || id_diego.value.toUpperCase() == 'DIEGO RIBAS') {
         
         pontuacao.innerHTML = `${contador = contador + acertou}/6`
+        document.getElementById("id_diego").disabled = true
         document.getElementById("botao_diego").disabled = true
         contador_acertou++
     } else {
         pontuacao.innerHTML = `${contador = contador + errou}/6`
+        document.getElementById("id_diego").disabled = true
         document.getElementById("botao_diego").disabled = true
         contador_errou--
 
@@ -36,10 +40,12 @@ function corrigir_everton(){
     if (id_everton.value.toUpperCase() == 'EVERTON RIBEIRO') {
         
         pontuacao.innerHTML = `${contador = contador + acertou}/6`
+        document.getElementById("id_everton").disabled = true
         document.getElementById("botao_everton").disabled = true
         contador_acertou++
     } else {
         pontuacao.innerHTML = `${contador = contador + errou}/6`
+        document.getElementById("id_everton").disabled = true
         document.getElementById("botao_everton").disabled = true
         contador_errou--
     }
@@ -49,10 +55,12 @@ function corrigir_micha(){
     if (id_micha.value.toUpperCase() == 'MICHAEL'|| id_micha.value.toUpperCase() == 'ROBOZINHO') {
         
         pontuacao.innerHTML = `${contador = contador + acertou}/6`
+        document.getElementById("id_micha").disabled = true
         document.getElementById("botao_micha").disabled = true
         contador_acertou++
     } else {
         pontuacao.innerHTML = `${contador = contador + errou}/6`
+        document.getElementById("id_micha").disabled = true
         document.getElementById("botao_micha").disabled = true
         contador_errou--
     }
@@ -62,10 +70,12 @@ function corrigir_vittinho(){
     if (id_vittinho.value.toUpperCase() == 'VITINHO' || id_vittinho.value.toUpperCase() == 'VITTINHO'){
         
         pontuacao.innerHTML = `${contador = contador + acertou}/6`
+        document.getElementById("id_vittinho").disabled = true
         document.getElementById("botao_vitinho").disabled = true
         contador_acertou++
     } else {
         pontuacao.innerHTML = `${contador = contador + errou}/6`
+        document.getElementById("id_vittinho").disabled = true
         document.getElementById("botao_vitinho").disabled = true
         contador_errou--
     }
@@ -75,10 +85,12 @@ function corrigir_rodi(){
     if (id_rodi.value.toUpperCase() == 'RODILINDO' || id_rodi.value.toUpperCase() == 'RODINEY') {
         
         pontuacao.innerHTML = `${contador = contador + acertou}/6`
+        document.getElementById("id_rodi").disabled = true
         document.getElementById("botao_rodi").disabled = true
         contador_acertou++
     } else {
         pontuacao.innerHTML = `${contador = contador + errou}/6`
+        document.getElementById("id_rodi").disabled = true
         document.getElementById("botao_rodi").disabled = true
         contador_errou--
     }

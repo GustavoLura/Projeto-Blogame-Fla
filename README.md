@@ -9,7 +9,7 @@ Navegador Chrome (preferencialmente);
 
 Clonagem do Repositório
 
-Dê o comando git clone https://github.com/Don616/sitetarot em um terminal de sua preferência;
+Dê o comando git clone https://github.com/GustavoLura/Projeto-Blogame-Fla.git em um terminal de sua preferência;
 Instalação
 
 Dentro da pasta 'projeto-blogame-fla' instale as dependências com o comando npm install (requer o NodeJS instalado na máquina);
